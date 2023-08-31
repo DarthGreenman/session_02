@@ -20,17 +20,15 @@ namespace bank {
 
     void change_account_balance(account&, double);
     void view_account(const account&);
+    int get_input_account(int, const std::string&,
+        const std::string & = "Введите правильное цифровое значение: "
+    );
 }
 
 template <typename T>
 T get_input_value(const std::string & =
     "Введите правильное цифровое значение: "
 );
-
-int get_input_account(int, const std::string&,
-    const std::string & = "Введите правильное цифровое значение: "
-);
-
 
 int main()
 {
@@ -40,7 +38,7 @@ int main()
 
     try {
         cout << "Введите 9-и значный номер счёта: ";
-        int account{ get_input_account(9,
+        int account{ bank::get_input_account(9,
             "Введите 9-и значное число: ") };
 
         cout << "Введите имя владельца: ";
@@ -73,6 +71,17 @@ namespace bank {
             << owner_account.account_number << ", "
             << owner_account.balance;
     }
+    int get_input_account(int number_length, const std::string& message_1,
+        const std::string& message_2
+    )
+    {
+        int account{ get_input_value<int>(message_2) };
+        for (; static_cast<int>(log10(account) + 1) != number_length; ) {
+            std::cout << message_1;
+            account = get_input_value<int>(message_2);
+        }
+        return account;
+    }
 }
 
 template <typename T>
@@ -96,16 +105,4 @@ T get_input_value(
             throw std::exception{ "\nПроизошла фатальная ошибка!\n" };
         }
     }
-}
-
-int get_input_account(int number_length, const std::string& message_1,
-    const std::string& message_2
-)
-{
-    int account{ get_input_value<int>(message_2) };
-    for (; static_cast<int>(log10(account) + 1) != number_length; ) {
-        std::cout << message_1;
-        account = get_input_value<int>(message_2);
-    }
-    return account;
 }
