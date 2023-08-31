@@ -38,24 +38,29 @@ int main()
     using std::cout;
     using std::cin;
 
-    cout << "Введите 9-и значный номер счёта: ";
-    int account{ get_input_account(9,
-        "Введите 9-и значное число: ") };
+    try {
+        cout << "Введите 9-и значный номер счёта: ";
+        int account{ get_input_account(9,
+            "Введите 9-и значное число: ") };
 
-    cout << "Введите имя владельца: ";
-    std::string name;
-    cin >> name;
+        cout << "Введите имя владельца: ";
+        std::string name;
+        cin >> name;
 
-    cout << "Введите баланс: ";
-    double sum{ get_input_value<double>() };
+        cout << "Введите баланс: ";
+        double sum{ get_input_value<double>() };
 
-    bank::account visitor{ name, account, sum };
+        bank::account visitor{ name, account, sum };
 
-    cout << "Введите новый баланс: ";
-    bank::change_account_balance(visitor,
-        get_input_value<double>());
-    bank::view_account(visitor);
-
+        cout << "Введите новый баланс: ";
+        bank::change_account_balance(visitor,
+            get_input_value<double>());
+        
+        bank::view_account(visitor);
+    }
+    catch (const std::exception& e) {
+        std::cerr << e.what();
+    }
     return 0;
 }
 
