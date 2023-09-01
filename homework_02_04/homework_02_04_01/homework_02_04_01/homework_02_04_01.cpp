@@ -11,8 +11,8 @@
 struct data_block {
     std::string city;
     std::string street;
-    unsigned house;
-    unsigned apartment;
+    unsigned house{};
+    unsigned apartment{};
 };
 
 int main()
