@@ -1,4 +1,4 @@
-/* triangle.h */
+﻿/* triangle.h */
 
 #ifndef TRIANGLE_H
 #define TRIANGLE_H
@@ -9,10 +9,15 @@ namespace geo {
 	class Triangle :
 		public Shape {
 	public:
-		Triangle();
-		~Triangle();
+		Triangle() {
+		}
 
-		unsigned number_sides() const override;
+		~Triangle() {
+		}
+
+		unsigned number_sides() const override {
+			return number_sides_;
+		}
 
 	private:
 		unsigned number_sides_{ 3 };

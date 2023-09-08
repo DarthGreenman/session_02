@@ -1,4 +1,4 @@
-/* Quadrilateral.cpp */
+п»ї/* Quadrilateral.cpp */
 
 #include "Quadrilateral.h"
 
@@ -17,9 +17,9 @@ namespace geo {
 	{
 		if (!figure_is_correct()) {
 			const std::string message{
-				"Фигура типа " +
+				"Р¤РёРіСѓСЂР° С‚РёРїР° " +
 				std::string{ typeid(*this).name() } +
-				" не существует!"
+				" РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!"
 			};
 			throw std::exception(message.c_str());
 		}
@@ -33,13 +33,13 @@ namespace geo {
 	void Quadrilateral::view_info() const
 	{
 		using std::cout;
-		cout << "Тип: " << typeid(*this).name();
-		cout << "\nСтороны: "
+		cout << "РўРёРї: " << typeid(*this).name();
+		cout << "\nРЎС‚РѕСЂРѕРЅС‹: "
 			<< "AB = " << sides_.ab
 			<< ", BC = " << sides_.bc
 			<< ", CD = " << sides_.cd
 			<< ", DA = " << sides_.da;
-		cout << "\nУглы: "
+		cout << "\nРЈРіР»С‹: "
 			<< "DAB = " << angles_.dab
 			<< " ABC = " << angles_.abc
 			<< " BCD = " << angles_.bcd
@@ -50,8 +50,8 @@ namespace geo {
 	bool Quadrilateral::figure_is_correct() const
 	{
 		/*
-		* Каждая сторона четырёхугольника всегда меньше
-		* суммы трёх остальных сторон.
+		* РљР°Р¶РґР°СЏ СЃС‚РѕСЂРѕРЅР° С‡РµС‚С‹СЂС‘С…СѓРіРѕР»СЊРЅРёРєР° РІСЃРµРіРґР° РјРµРЅСЊС€Рµ
+		* СЃСѓРјРјС‹ С‚СЂС‘С… РѕСЃС‚Р°Р»СЊРЅС‹С… СЃС‚РѕСЂРѕРЅ.
 		*/
 		return sides_.ab < sides_.bc + sides_.cd + sides_.da &&
 			sides_.bc < sides_.ab + sides_.cd + sides_.da &&

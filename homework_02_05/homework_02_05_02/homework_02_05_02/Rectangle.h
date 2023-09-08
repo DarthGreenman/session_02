@@ -1,4 +1,4 @@
-/* Rectangle.h */
+﻿/* Rectangle.h */
 
 #ifndef QUADRILATERAL_RECTANGLE_H
 #define QUADRILATERAL_RECTANGLE_H

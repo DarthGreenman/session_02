@@ -1,4 +1,4 @@
-/* Isosceles.h */
+﻿/* Isosceles.h */
 
 #ifndef TRIANGLE_ISOSCELES_H
 #define TRIANGLE_ISOSCELES_H

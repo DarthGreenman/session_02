@@ -1,4 +1,4 @@
-/* Triangle_equilateral.h */
+﻿/* Triangle_equilateral.h */
 
 #ifndef TRIANGLE_EQUILATERAL_H
 #define TRIANGLE_EQUILATERAL_H

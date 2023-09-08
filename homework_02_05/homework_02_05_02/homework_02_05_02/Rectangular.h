@@ -1,4 +1,4 @@
-/* Rectangular.h */
+﻿/* Rectangular.h */
 
 #ifndef TRIANGLE_RECTANGULAR_H
 #define TRIANGLE_RECTANGULAR_H

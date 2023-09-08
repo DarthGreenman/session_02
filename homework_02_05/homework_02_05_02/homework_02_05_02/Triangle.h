@@ -1,4 +1,4 @@
-/* Triangle.h */
+﻿/* Triangle.h */
 
 #ifndef TRIANGLE_FREEFORM_H
 #define TRIANGLE_FREEFORM_H

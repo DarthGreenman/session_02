@@ -1,4 +1,4 @@
-/* Shape.cpp */
+п»ї/* Shape.cpp */
 
 #include "Shape.h"
 
@@ -23,7 +23,7 @@ namespace geo {
 		if (!Shape::init_sides(sides) ||
 			!Shape::init_angles(angles))
 		{
-			const std::string message{ "Ошибка при создание объекта " +
+			const std::string message{ "РћС€РёР±РєР° РїСЂРё СЃРѕР·РґР°РЅРёРµ РѕР±СЉРµРєС‚Р° " +
 				std::string(typeid(*this).name()) };
 			throw std::exception(message.c_str());
 		}

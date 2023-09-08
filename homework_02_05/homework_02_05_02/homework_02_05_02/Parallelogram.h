@@ -1,4 +1,4 @@
-/* Parallelogram.h */
+﻿/* Parallelogram.h */
 
 #ifndef QUADRILATERAL_PARALLELOGRAM_H
 #define QUADRILATERAL_PARALLELOGRAM_H

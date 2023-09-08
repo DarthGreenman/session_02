@@ -1,4 +1,4 @@
-/* Rhombus.h */
+﻿/* Rhombus.h */
 
 #ifndef QUADRILATERAL_RHOMBUS_H
 #define QUADRILATERAL_RHOMBUS_H

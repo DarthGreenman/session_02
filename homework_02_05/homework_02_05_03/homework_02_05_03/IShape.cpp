@@ -1,4 +1,4 @@
-/* IShape.cpp */
+﻿/* IShape.cpp */
 
 #include "IShape.h"
 #include <cmath>

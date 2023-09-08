@@ -129,9 +129,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="homework_02_05_01.cpp" />
-    <ClCompile Include="quadrilateral.cpp" />
-    <ClCompile Include="shape.cpp" />
-    <ClCompile Include="triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="localisation.h" />

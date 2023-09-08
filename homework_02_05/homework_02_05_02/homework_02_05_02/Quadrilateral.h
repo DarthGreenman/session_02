@@ -1,4 +1,4 @@
-/* Quadrilateral.h */
+﻿/* Quadrilateral.h */
 
 #ifndef QUADRILATERAL_FREEFORM_H
 #define QUADRILATERAL_FREEFORM_H

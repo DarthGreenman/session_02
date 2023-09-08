@@ -1,4 +1,4 @@
-/* Square.h */
+﻿/* Square.h */
 
 #ifndef QUADRILATERAL_SQUARE_H
 #define QUADRILATERAL_SQUARE_H
