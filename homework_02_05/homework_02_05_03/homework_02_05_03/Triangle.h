@@ -13,10 +13,7 @@
 #include "Ishape.h"
 
 #include <vector>
-#include <utility>
-#include <string>
-#include <exception>
-#include <iostream>
+#include <typeinfo>
 
 namespace geo {
 	enum class Triangle_sides {
