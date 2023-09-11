@@ -5,15 +5,18 @@
 #include <algorithm>
 #include <cmath>
 #include <numbers>
-#include <iostream>
 #include <numeric>
-#include <exception>
+#include <stdexcept>
+#include <typeinfo>
 
 namespace geo {
-	Shape::Shape(size_t size) :
+	Shape::Shape(size_t size) try :
 		p_sides_{ new std::vector<double>(size) },
 		p_angles_{ new std::vector<double>(size) }
 	{
+	}
+	catch(const std::bad_alloc& e) {
+		throw e;
 	}
 
 	Shape::Shape(const std::vector<double>& sides,
@@ -23,9 +26,8 @@ namespace geo {
 		if (!Shape::init_sides(sides) ||
 			!Shape::init_angles(angles))
 		{
-			const std::string message{ "Ошибка при создание объекта " +
-				std::string(typeid(*this).name()) };
-			throw std::exception(message.c_str());
+			throw std::runtime_error("Ошибка при создание объекта " +
+				std::string(typeid(*this).name()));
 		}
 	}
 
