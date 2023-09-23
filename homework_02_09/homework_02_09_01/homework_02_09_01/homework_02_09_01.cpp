@@ -24,12 +24,12 @@ int main()
         return 1;
     }
    
-    cout << view(f1) << ((f1 == f2) ? " == " : " not == ") << view(f2) << '\n';
-    cout << view(f1) << ((f1 != f2) ? " != " : " not != ") << view(f2) << '\n';
-    cout << view(f1) << ((f1 < f2) ? " < " : " not < ") << view(f2) << '\n';
-    cout << view(f1) << ((f1 > f2) ? " > " : " not > ") << view(f2) << '\n';
-    cout << view(f1) << ((f1 <= f2) ? " <= " : " not <= ") << view(f2) << '\n';
-    cout << view(f1) << ((f1 >= f2) ? " >= " : " not >= ") << view(f2) << '\n';
+    cout << f1 << ((f1 == f2) ? " == " : " not == ") << f2 << '\n';
+    cout << f1 << ((f1 != f2) ? " != " : " not != ") << f2 << '\n';
+    cout << f1 << ((f1 < f2) ? " < " : " not < ") << f2 << '\n';
+    cout << f1 << ((f1 > f2) ? " > " : " not > ") << f2 << '\n';
+    cout << f1 << ((f1 <= f2) ? " <= " : " not <= ") << f2 << '\n';
+    cout << f1 << ((f1 >= f2) ? " >= " : " not >= ") << f2 << '\n';
     
     return 0;
 }
