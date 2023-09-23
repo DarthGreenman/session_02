@@ -3,12 +3,11 @@
 #ifndef FRACTION_H
 #define FRACTION_H
 
-#include <string>
 #include <stdexcept>
+#include <iostream>
 
 namespace bag {
 	class Fraction	{
-		friend const std::string view(const Fraction&);
 
 		friend const bool operator==(const Fraction&, const Fraction&);
 		friend const bool operator!=(const Fraction&, const Fraction&);
@@ -21,6 +20,8 @@ namespace bag {
 		friend const Fraction operator-(const Fraction&, const Fraction&);
 		friend const Fraction operator*(const Fraction&, const Fraction&);
 		friend const Fraction operator/(const Fraction&, const Fraction&);
+
+		friend std::ostream& operator<< (std::ostream&, const Fraction&);
 
 	public:
 		Fraction() : num_{}, den_{} {}
