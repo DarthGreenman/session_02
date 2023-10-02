@@ -3,8 +3,8 @@
 #include <iostream>
 #include <string>
 
-#include "Greeter/Greeter/Greeter.h"
-#include "localisation.h"
+#include "../../lib/Greeter/Greeter/Greeter.h"
+#include "../../lib/localisation.h"
 
 int main()
 {

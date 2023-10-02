@@ -11,6 +11,7 @@
 #include <typeinfo>
 
 namespace geo {
+
 	Shape::Shape(size_t size) try :
 		p_sides_{ std::make_unique<std::vector<double>>(size) },
 		p_angles_{ std::make_unique<std::vector<double>>(size) }

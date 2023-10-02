@@ -1,4 +1,4 @@
-/* Greeter.h */
+п»ї/* Greeter.h */
 
 #ifndef GREETER_H
 #define GREETER_H
@@ -12,12 +12,15 @@
 #include <string>
 
 namespace bag {
-	class ADDRESSING_SOMEONE_DLL Greeter {
+	class Greeter {
 	public:
-		Greeter(const std::string & = "Здравствуйте, ");
-		~Greeter();
+		ADDRESSING_SOMEONE_DLL
+			Greeter(const std::string & = "Р—РґСЂР°РІСЃС‚РІСѓР№С‚Рµ, ");
+		ADDRESSING_SOMEONE_DLL
+			~Greeter();
 
-		const std::string greet(const std::string&) const;
+		ADDRESSING_SOMEONE_DLL
+			const std::string greet(const std::string&) const;
 
 	private:
 		std::string message_{};

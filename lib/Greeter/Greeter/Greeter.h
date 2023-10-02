@@ -1,4 +1,4 @@
-/* Greeter.h */
+п»ї/* Greeter.h */
 
 #ifndef GREETER_H
 #define GREETER_H
@@ -8,7 +8,7 @@
 namespace bag {
 	class Greeter {
 	public:
-		Greeter(const std::string & = "Здравствуйте, ");
+		Greeter(const std::string & = "Р—РґСЂР°РІСЃС‚РІСѓР№С‚Рµ, ");
 		~Greeter();
 
 		const std::string greet(const std::string&) const;

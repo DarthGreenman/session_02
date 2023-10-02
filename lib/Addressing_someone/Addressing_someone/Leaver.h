@@ -1,4 +1,4 @@
-/* Leaver.h */
+п»ї/* Leaver.h */
 
 #ifndef LEAVER_H
 #define LEAVER_H
@@ -12,12 +12,15 @@
 #include <string>
 
 namespace bag {
-	class ADDRESSING_SOMEONE_DLL Leaver {
+	class Leaver {
 	public:
-		Leaver(const std::string & = "До свидания, ");
-		~Leaver();
+		ADDRESSING_SOMEONE_DLL
+			Leaver(const std::string & = "Р”Рѕ СЃРІРёРґР°РЅРёСЏ, ");
+		ADDRESSING_SOMEONE_DLL
+			~Leaver();
 
-		const std::string leave(const std::string&) const;
+		ADDRESSING_SOMEONE_DLL
+			const std::string leave(const std::string&) const;
 
 	private:
 		std::string message_{};

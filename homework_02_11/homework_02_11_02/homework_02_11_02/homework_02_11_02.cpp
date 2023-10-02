@@ -3,9 +3,9 @@
 #include <iostream>
 #include <string>
 
-#include "Greeter.h"
-#include "ILeaver.h"
-#include "localisation.h"
+#include "..\..\lib\Addressing_someone\Addressing_someone\Greeter.h"
+#include "..\..\lib\Addressing_someone\Addressing_someone\Leaver.h"
+#include "..\..\lib\localisation.h"
 
 int main()
 {
@@ -24,18 +24,8 @@ int main()
     bag::Greeter hello;
     cout << hello.greet(name);
     
-    bag::ILeaver* goodbye{};
-    try {
-        goodbye = bag::make_leaver();
-    }
-    catch (const std::exception& e) {
-        cerr << e.what();
-        return 1;
-    }
-    cout << '\n' << goodbye->leave(name);
-
-    goodbye->release();
-    goodbye = nullptr;
+    bag::Leaver goodbye;
+    cout << '\n' << goodbye.leave(name);
 
     return 0;
 }

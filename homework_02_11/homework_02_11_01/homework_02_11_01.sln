@@ -5,7 +5,7 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "homework_02_11_01", "homework_02_11_01\homework_02_11_01.vcxproj", "{7841C622-73CC-491C-83F0-D37B372BBA90}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Greeter", "..\lib\Greeter\Greeter\Greeter.vcxproj", "{3E74BE92-F565-4ECE-BF12-A7F4E2AB2907}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Greeter", "..\..\lib\Greeter\Greeter\Greeter.vcxproj", "{3E74BE92-F565-4ECE-BF12-A7F4E2AB2907}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

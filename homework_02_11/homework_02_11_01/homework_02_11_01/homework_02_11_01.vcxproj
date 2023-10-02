@@ -138,7 +138,7 @@
     <ClCompile Include="homework_02_11_01.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\lib\Greeter\Greeter\Greeter.vcxproj">
+    <ProjectReference Include="..\..\..\lib\Greeter\Greeter\Greeter.vcxproj">
       <Project>{3e74be92-f565-4ece-bf12-a7f4e2ab2907}</Project>
     </ProjectReference>
   </ItemGroup>

@@ -1,9 +1,11 @@
 ﻿// Geometry.cpp :
 
 #include <iostream>
+#include <memory>
 
-#include "Geometric_shapes.h"
-#include "localisation.h"
+#include "..\..\..\lib\Geometric_shapes\Geometric_shapes\Codes\Geometric_shapes.h"
+#include "..\..\..\lib\Geometric_shapes\Geometric_shapes\Codes\Types.h"
+#include "..\..\..\lib\localisation.h"
 
 int main()
 {
@@ -17,7 +19,7 @@ int main()
 	using geo::Part;
 
 	const std::vector<geo::Param_list> shapes_data{
-		Param_list{ Form::Triangle, {{Part::side, 30},{Part::side, 40},{Part::side, 50} } } ,
+		Param_list{ Form::Triangle, {{Part::side, 30},{Part::side, 40},{Part::side, 50} } },
 		Param_list{ Form::Triangle, {{Part::side, 40},{Part::angle, 30} } },
 		Param_list{ Form::Triangle, {{Part::side, 30},{Part::side, 40} } },
 		Param_list{ Form::Triangle, {{Part::side, 30} } },
@@ -33,7 +35,6 @@ int main()
 	};
 
 	std::vector<geo::IShape*> shapes{};
-
 	for (const auto& data : shapes_data) {
 		try {
 			shapes.push_back(geo::make_shape(data));
