@@ -1,7 +1,7 @@
 ﻿/* Shape.cpp */
 
 #include "Shape.h"
-#include "..\..\..\Exceptions.h"
+#include "Exceptions.h"
 
 #include <algorithm>
 #include <cmath>

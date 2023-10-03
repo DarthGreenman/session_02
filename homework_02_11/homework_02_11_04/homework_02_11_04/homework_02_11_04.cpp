@@ -19,35 +19,40 @@ int main()
 	using geo::Part;
 
 	const std::vector<geo::Param_list> shapes_data{
-		Param_list{ Form::Triangle, {{Part::side, 30},{Part::side, 40},{Part::side, 50} } },
-		Param_list{ Form::Triangle, {{Part::side, 40},{Part::angle, 30} } },
-		Param_list{ Form::Triangle, {{Part::side, 30},{Part::side, 40} } },
-		Param_list{ Form::Triangle, {{Part::side, 30} } },
-		Param_list{ Form::Quadrangle, {{Part::side, 30},{Part::side, 40},{Part::side, 50},{Part::side, 60}} },
-		Param_list{ Form::Quadrangle, {{Part::side, 30},{Part::side, 40}, {Part::angle, 50}} },
-		Param_list{ Form::Quadrangle, {{Part::side, 30},{Part::side, 40}} },
-		Param_list{ Form::Quadrangle, {{Part::side, 30},{Part::angle, 40}} },
-		Param_list{ Form::Quadrangle, {{Part::side, 30}} },
-		Param_list{ Form::Triangle, {{Part::side, 30},{Part::side, 40},{Part::side, 150} } },
-		Param_list{ Form::Triangle, {{Part::angle, 30},{Part::angle, 40},{Part::angle, 50} } },
-		Param_list{ Form::Quadrangle, {{Part::angle, 30}} },
-		Param_list{ Form::Triangle, {{Part::side, 30},{Part::side, 40},{Part::side, 50},{Part::side, 50} } },
+		Param_list{ Form::Triangle, {{Part::side, 30},{Part::side, 40},{Part::side, 50}} } ,
+		Param_list{ Form::Triangle, {{Part::side, 40},{Part::angle, 30}} },
+		Param_list{ Form::Triangle, {{Part::side, 30},{Part::side, 40}} },
+		Param_list{ Form::Triangle, {{Part::side, 30}} },
+		Param_list{ Form::Triangle, {{Part::side, 30},{Part::side, 40},{Part::side, 150}} }, // Некорректные данные длин сторон
+		Param_list{ Form::Triangle, {{Part::angle, 30},{Part::angle, 40},{Part::angle, 50}} }, // Неизвестная фигура
+		Param_list{ Form::Triangle, {{Part::side, 30},{Part::side, 40},{Part::side, 50},{Part::side, 50}} }, // Неизвестная фигура
+		Param_list{	Form::Quadrangle, {{Part::side, 30},{Part::side, 40},{Part::side, 50},{Part::side, 60}} },
+		Param_list{	Form::Quadrangle, {{Part::side, 30},{Part::side, 40}, {Part::angle, 50}} },
+		Param_list{	Form::Quadrangle, {{Part::side, 30},{Part::side, 40}} },
+		Param_list{	Form::Quadrangle, {{Part::side, 30},{Part::angle, 40}} },
+		Param_list{	Form::Quadrangle, {{Part::side, 30}} },
+		Param_list{	Form::Quadrangle, {{Part::angle, 30}} } // Неизвестная фигура
 	};
 
-	std::vector<geo::IShape*> shapes{};
+	std::vector<std::unique_ptr<geo::IShape*>> shapes{};
 	for (const auto& data : shapes_data) {
 		try {
-			shapes.push_back(geo::make_shape(data));
+			shapes.push_back(
+				std::make_unique<geo::IShape*>(
+					geo::make_shape(data)
+				)
+			);
 		}
 		catch (const std::exception& e) {
 			std::cerr << e.what() << "\n\n";
 		}
 	}
 
-	using std::cout;
 	for (const auto& shape : shapes) {
-		auto&& [name, is_correct, sides, angles] = shape->type_info();
+		auto&& [name, is_correct,
+			sides, angles] = (*shape)->type_info();
 		if (is_correct) {
+			using std::cout;
 			cout << "\nФигура\n" << name << "\nсоздана.";
 
 			cout << "\nстороны: ";
@@ -61,14 +66,7 @@ int main()
 				const std::string sep{ i != angles.size() - 1 ? ", " : "." };
 				cout << angles[i] << sep;
 			}
-			cout << "\n\n";
-		}
-	}
-
-	for (auto& shape : shapes) {
-		if (shape) {
-			shape->release();
-			shape = nullptr;
+			cout << '\n';
 		}
 	}
 	return 0;

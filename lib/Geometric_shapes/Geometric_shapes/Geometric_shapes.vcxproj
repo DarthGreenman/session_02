@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Codes\Exceptions.h" />
     <ClInclude Include="Codes\Geometric_shapes.h" />
-    <ClInclude Include="Codes\localisation.h" />
     <ClInclude Include="Codes\Quadrangle.h" />
     <ClInclude Include="Codes\Shape.h" />
     <ClInclude Include="Codes\Triangle.h" />

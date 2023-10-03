@@ -12,7 +12,7 @@
 
 #include "Shape.h"
 #include "Types.h"
-#include "..\..\..\Exceptions.h"
+#include "Exceptions.h"
 
 #include <vector>
 #include <typeinfo>
