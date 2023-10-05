@@ -1,16 +1,12 @@
-﻿/* homework_02_10_01.cpp */
+﻿// homework_02_10_01.cpp: определяет точку входа для приложения.
+//
 
-/*
-* Введите имя: Виталий
-* Здравствуйте, Виталий!
-*/
-
+#include "Localisation.h"
 #include <iostream>
 #include <string>
 
-#include "localisation.h"
-
-int main() {
+int main()
+{
 	bag::Console_localisation locale{
 		bag::Console_localisation::Code_pages::rus
 	};
@@ -21,5 +17,5 @@ int main() {
 
 	std::cout << "Здравствуйте, " << name << '!';
 
-	return 0;
+return 0;
 }

@@ -1,9 +1,10 @@
-﻿// homework_02_10_02.cpp
+﻿// homework_02_10_02.cpp: определяет точку входа для приложения.
+//
 
-#include "lib\utilities\localisation.h"
-#include "lib\geo\Triangle.h"
-#include "lib\geo\Quadrilateral.h"
-#include "lib\geo\IShape.h"
+#include "../includes/Localisation.h"
+#include "../includes/Triangle.h"
+#include "../includes/Quadrangle.h"
+#include "../includes/Types.h"
 
 #include <iostream>
 
@@ -20,25 +21,16 @@ int main()
 		const geo::Rectangular rectangular{ 30, 40 };
 		const geo::Equilateral equilateral{ 250 };
 
-		const geo::Quadrilateral quadrilateral{ 100, 130, 200, 420 };
+		const geo::Quadrangle quadrangle{ 100, 130, 200, 420 };
 		const geo::Square square{ 100 };
 		const geo::Rectangle rectangle{ 100, 50 };
 		const geo::Parallelogram parallelogram{ 100, 150, 30 };
 		const geo::Rhombus rhombus{ 100, 110 };
 
 		using Interface_shape = geo::IShape;
-		const Interface_shape* p_tr{ &triangle },
-			* p_is{ &isosceles },
-			* p_rc{ &rectangular },
-			* p_eq{ &equilateral },
-			* p_qu{ &quadrilateral },
-			* p_sq{ &square },
-			* p_re{ &rectangle },
-			* p_pr{ &parallelogram },
-			* p_rh{ &rhombus };
-
 		const std::vector<const Interface_shape*> list{
-				p_tr, p_is, p_rc, p_eq, p_qu, p_sq, p_re, p_pr, p_rh
+				&triangle, &isosceles, &rectangular, &equilateral,
+				&quadrangle, &square, &rectangle, &parallelogram, &rhombus
 		};
 
 		using std::cout;
