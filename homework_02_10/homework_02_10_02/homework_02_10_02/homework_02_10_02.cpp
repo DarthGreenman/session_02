@@ -1,10 +1,10 @@
 ﻿// homework_02_10_02.cpp: определяет точку входа для приложения.
 //
 
-#include "../includes/Localisation.h"
-#include "../includes/Triangle.h"
-#include "../includes/Quadrangle.h"
-#include "../includes/Types.h"
+#include "Localisation.h"
+#include "Triangle.h"
+#include "Quadrangle.h"
+#include "Types.h"
 
 #include <iostream>
 
@@ -28,9 +28,18 @@ int main()
 		const geo::Rhombus rhombus{ 100, 110 };
 
 		using Interface_shape = geo::IShape;
+		const Interface_shape* p_tr{ &triangle },
+			* p_is{ &isosceles },
+			* p_rr{ &rectangular },
+			* p_eq{ &equilateral },
+			* p_qu{ &quadrangle },
+			* p_sq{ &square },
+			* p_rc{ &rectangle },
+			* p_pr{ &parallelogram },
+			* p_rh{ &rhombus };
+
 		const std::vector<const Interface_shape*> list{
-				&triangle, &isosceles, &rectangular, &equilateral,
-				&quadrangle, &square, &rectangle, &parallelogram, &rhombus
+				p_tr, p_is, p_rr, p_eq, p_qu, p_sq, p_rc, p_pr, p_rh
 		};
 
 		using std::cout;
@@ -56,5 +65,6 @@ int main()
 		std::cerr << e.what();
 	}
 
+	std::system("pause");
 	return 0;
 }
