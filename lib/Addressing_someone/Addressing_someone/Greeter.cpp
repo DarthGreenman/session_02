@@ -2,13 +2,14 @@
 
 #include "Greeter.h"
 
-bag::Greeter::Greeter(const std::string& hello) :
-	message_{ hello }
+namespace bag
 {
-}
+	Greeter::Greeter(const std::string& hello) :
+		message_{ hello } {}
 
-bag::Greeter::~Greeter() {}
+	Greeter::~Greeter() {}
 
-const std::string bag::Greeter::greet(const std::string& name) const {
-	return message_ + name;
+	const std::string Greeter::greet(const std::string& name) const {
+		return message_ + name;
+	}
 }
