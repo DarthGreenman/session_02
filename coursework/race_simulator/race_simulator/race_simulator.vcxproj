@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{8be0b78c-9677-4a3e-9c10-241117d60796}</ProjectGuid>
-    <RootNamespace>homework021104</RootNamespace>
+    <ProjectGuid>{46305d9f-9b3b-4aa9-a28e-37a25b35ac54}</ProjectGuid>
+    <RootNamespace>racesimulator</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -70,18 +70,6 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ExecutablePath>D:\Users\dima_kostyuchenko\Documents\Visual Studio 2022\source\repos\sessions\session_02\lib\Geometric_shapes\Geometric_shapes\Codes;$(ExecutablePath)</ExecutablePath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ExecutablePath>D:\Users\dima_kostyuchenko\Documents\Visual Studio 2022\source\repos\sessions\session_02\lib\Geometric_shapes\Geometric_shapes\Codes;$(ExecutablePath)</ExecutablePath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ExecutablePath>D:\Users\dima_kostyuchenko\Documents\Visual Studio 2022\source\repos\sessions\session_02\lib\Geometric_shapes\Geometric_shapes\Codes;$(ExecutablePath)</ExecutablePath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <ExecutablePath>D:\Users\dima_kostyuchenko\Documents\Visual Studio 2022\source\repos\sessions\session_02\lib\Geometric_shapes\Geometric_shapes\Codes;$(ExecutablePath)</ExecutablePath>
-  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level4</WarningLevel>
@@ -93,7 +81,6 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>Geometric_shapes.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -111,7 +98,6 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>Geometric_shapes.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -125,7 +111,6 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>Geometric.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -143,16 +128,24 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>Geometric_shapes.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="homework_02_11_04.cpp" />
+    <ClCompile Include="..\lib\Racers.cpp" />
+    <ClCompile Include="..\lib\Types.cpp" />
+    <ClCompile Include="race_simulator.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\lib\Geometric\Geometric\Geometric.vcxproj">
-      <Project>{3500c659-8f66-4e6d-99c9-e0d4d1123f0a}</Project>
-    </ProjectReference>
+    <ClInclude Include="..\lib\Input.h" />
+    <ClInclude Include="..\lib\Racers.h" />
+    <ClInclude Include="..\lib\Types.h" />
+    <ClInclude Include="..\lib\Vehicle.h" />
+    <ClInclude Include="..\lib\Vehicle_base.h" />
+    <ClInclude Include="..\lib\Vehicle_air.h" />
+    <ClInclude Include="..\lib\Vehicle_land.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Название сущностей проекта.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,11 +1,12 @@
-﻿// homework_02_11_02.cpp 
+﻿// homework_02_11_03.cpp: определяет точку входа для приложения.
+//
 
 #include <iostream>
 #include <string>
 
-#include "..\..\lib\Addressing_someone\Addressing_someone\Greeter.h"
-#include "..\..\lib\Addressing_someone\Addressing_someone\Leaver.h"
 #include "Localisation.h"
+#include "Greeter.h"
+#include "Leaver.h"
 
 int main()
 {
@@ -23,7 +24,7 @@ int main()
 
     bag::Greeter hello;
     cout << hello.greet(name);
-    
+
     bag::Leaver goodbye;
     cout << '\n' << goodbye.leave(name);
 

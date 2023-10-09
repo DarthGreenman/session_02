@@ -4,7 +4,7 @@
 #include <string>
 
 #include "../../lib/Greeter/Greeter/Greeter.h"
-#include "../../lib/localisation.h"
+#include "Localisation.h"
 
 int main()
 {
