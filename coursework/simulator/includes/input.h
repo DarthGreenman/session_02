@@ -4,6 +4,7 @@
 #define INPUT_H
 
 #include <iostream>
+#include <string>
 #include <limits>
 
 namespace bag {
@@ -16,7 +17,8 @@ namespace bag {
         const std::string & = "¬ведите корректное значение дл€ данного типа.");
 }
 
-namespace bag {
+namespace bag
+{
     template <typename T>
     std::istream& get_input_value(std::istream& in, T& cmd,
         const std::string& invite, const std::string& alarm)

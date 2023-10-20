@@ -16,7 +16,8 @@
 
 #include <Windows.h>
 
-namespace bag {
+namespace bag
+{
 	class Console_localisation {
 	public:
 		enum class Code_pages : unsigned long int {
