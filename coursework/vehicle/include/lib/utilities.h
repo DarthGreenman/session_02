@@ -1,4 +1,4 @@
-/* utilities.h */
+п»ї/* utilities.h */
 
 #ifndef RACE_SIMULATOR_UTILITIES_H
 #define RACE_SIMULATOR_UTILITIES_H
@@ -9,7 +9,7 @@
 
 namespace bag
 {
-	/* Шаблоны функций для сравнения типов size_t, double. */
+	/* РЁР°Р±Р»РѕРЅС‹ С„СѓРЅРєС†РёР№ РґР»СЏ СЃСЂР°РІРЅРµРЅРёСЏ С‚РёРїРѕРІ size_t, double. */
 	template<typename T>
 	concept Type_comparison = std::same_as<T, size_t> || std::same_as<T, double>;
 

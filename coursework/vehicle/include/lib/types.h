@@ -1,4 +1,4 @@
-/* types.h */
+п»ї/* types.h */
 
 #ifndef RACE_SIMULATOR_TYPES_H
 #define RACE_SIMULATOR_TYPES_H
@@ -10,23 +10,23 @@
 
 namespace vehicles
 {
-	/* Идентификатор фильтра меню основной программы. */
+	/* РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С„РёР»СЊС‚СЂР° РјРµРЅСЋ РѕСЃРЅРѕРІРЅРѕР№ РїСЂРѕРіСЂР°РјРјС‹. */
 	enum class Habitat : char {
 		LND = 'A', AIR, ALL
 	};
 
-	/* Идентификатор для взаимодействия с кодом меню основной программы. */
+	/* РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґР»СЏ РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёСЏ СЃ РєРѕРґРѕРј РјРµРЅСЋ РѕСЃРЅРѕРІРЅРѕР№ РїСЂРѕРіСЂР°РјРјС‹. */
 	struct Typeid {
 		Habitat		habitat;
 		ui::Barkey	bar_key;
 	};
 
 	/*
-	* Конкретные типы однозначно определяющие для всех экземпляров
-	* наземного и воздушного типов транспорта:
-	* - имя транспортного средства;
-	* - алгоритм расчета параметра влияющего на время прохождения пути;
-	* - идентификатор для взаимодействия с кодом меню основной программы.
+	* РљРѕРЅРєСЂРµС‚РЅС‹Рµ С‚РёРїС‹ РѕРґРЅРѕР·РЅР°С‡РЅРѕ РѕРїСЂРµРґРµР»СЏСЋС‰РёРµ РґР»СЏ РІСЃРµС… СЌРєР·РµРјРїР»СЏСЂРѕРІ
+	* РЅР°Р·РµРјРЅРѕРіРѕ Рё РІРѕР·РґСѓС€РЅРѕРіРѕ С‚РёРїРѕРІ С‚СЂР°РЅСЃРїРѕСЂС‚Р°:
+	* - РёРјСЏ С‚СЂР°РЅСЃРїРѕСЂС‚РЅРѕРіРѕ СЃСЂРµРґСЃС‚РІР°;
+	* - Р°Р»РіРѕСЂРёС‚Рј СЂР°СЃС‡РµС‚Р° РїР°СЂР°РјРµС‚СЂР° РІР»РёСЏСЋС‰РµРіРѕ РЅР° РІСЂРµРјСЏ РїСЂРѕС…РѕР¶РґРµРЅРёСЏ РїСѓС‚Рё;
+	* - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґР»СЏ РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёСЏ СЃ РєРѕРґРѕРј РјРµРЅСЋ РѕСЃРЅРѕРІРЅРѕР№ РїСЂРѕРіСЂР°РјРјС‹.
 	*/
 	namespace types
 	{
@@ -42,7 +42,7 @@ namespace vehicles
 				return 
 					equal<Arg>(param, 0) ? 5.0 : 8.0;
 			}
-			static inline const string name{ "Верблюд" };
+			static inline const string name{ "Р’РµСЂР±Р»СЋРґ" };
 			static inline const Typeid key{ Habitat::LND, Barkey::BAR_01 };
 		};
 		template<typename Arg>
@@ -52,7 +52,7 @@ namespace vehicles
 					equal<Arg>(param, 0) ? 5.0 :
 						equal<Arg>(param, 1) ? 6.5 : 8.0;
 			}
-			static inline const string name{ "Верблюд-быстроход" };
+			static inline const string name{ "Р’РµСЂР±Р»СЋРґ-Р±С‹СЃС‚СЂРѕС…РѕРґ" };
 			static inline const Typeid key{ Habitat::LND, Barkey::BAR_02 };
 		};
 		template<typename Arg>
@@ -61,7 +61,7 @@ namespace vehicles
 				return
 					greater<Arg>(param, 0) || equal<Arg>(param, 0) ? 2.0 : 0.0;
 			}
-			static inline const string name{ "Кентавр" };
+			static inline const string name{ "РљРµРЅС‚Р°РІСЂ" };
 			static inline const Typeid key{ Habitat::LND, Barkey::BAR_03 };
 		};
 		template<typename Arg>
@@ -70,7 +70,7 @@ namespace vehicles
 				return 
 					equal<Arg>(param, 0) ? 10.0 : 5.0;
 			}
-			static inline const string name{ "Ботинки-вездеходы" };
+			static inline const string name{ "Р‘РѕС‚РёРЅРєРё-РІРµР·РґРµС…РѕРґС‹" };
 			static inline const Typeid key{ Habitat::LND, Barkey::BAR_04 };
 		};
 		template<typename Arg>
@@ -81,7 +81,7 @@ namespace vehicles
 						less<Arg>(param, 5000.0) ? 3 :
 							less<Arg>(param, 10000.0) ? 10 : 5;
 			}
-			static inline const string name{ "Ковер-самолет" };
+			static inline const string name{ "РљРѕРІРµСЂ-СЃР°РјРѕР»РµС‚" };
 			static inline const Typeid key{ Habitat::AIR, Barkey::BAR_05 };
 		};
 		template<typename Arg>
@@ -90,7 +90,7 @@ namespace vehicles
 				return 
 					greater<Arg>(param, 0.0) || equal<Arg>(param, 0.0) ? 6 : 0;
 			}
-			static inline const string name{ "Орел" };
+			static inline const string name{ "РћСЂРµР»" };
 			static inline const Typeid key{ Habitat::AIR, Barkey::BAR_06 };
 		};
 		template<typename Arg>
@@ -99,7 +99,7 @@ namespace vehicles
 				return
 					static_cast<size_t>(param / 10000);
 			}
-			static inline const string name{ "Метла" };
+			static inline const string name{ "РњРµС‚Р»Р°" };
 			static inline const Typeid key{ Habitat::AIR, Barkey::BAR_07 };
 		};
 	};

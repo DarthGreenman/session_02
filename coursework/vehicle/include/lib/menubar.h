@@ -1,11 +1,11 @@
-/* menubar.h */
+п»ї/* menubar.h */
 
 #ifndef RACE_SIMULATOR_MENUBAR_H
 #define RACE_SIMULATOR_MENUBAR_H
 
 namespace ui
 {
-	/* Идентификатор строки меню основной программы. */
+	/* РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃС‚СЂРѕРєРё РјРµРЅСЋ РѕСЃРЅРѕРІРЅРѕР№ РїСЂРѕРіСЂР°РјРјС‹. */
 	enum class Barkey : char {
 		QUIT = 'Q', BAR_01 = 'A', BAR_02, BAR_03, BAR_04, BAR_05, BAR_06, BAR_07
 	};
