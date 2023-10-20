@@ -1,4 +1,4 @@
-/* racer.h */
+п»ї/* racer.h */
 
 #ifndef RACE_SIMULATOR_RACERS_H
 #define RACE_SIMULATOR_RACERS_H
@@ -11,7 +11,7 @@
 
 namespace race
 {
-    /* Проверяет был ли участник зарегистрирован ранее */
+    /* РџСЂРѕРІРµСЂСЏРµС‚ Р±С‹Р» Р»Рё СѓС‡Р°СЃС‚РЅРёРє Р·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅ СЂР°РЅРµРµ */
     bool is_registered_racer(const std::vector<std::unique_ptr<vehicles::Vehicle>>& race,
         std::string name);
     std::unique_ptr<vehicles::Vehicle> make_racer(char bar_key);

@@ -1,4 +1,4 @@
-/* Dialogues.h */
+ï»¿/* Dialogues.h */
 
 #ifndef RACE_DIALOGUES_H
 #define RACE_DIALOGUES_H
@@ -17,16 +17,16 @@ namespace ui
 {
     using Menu = std::vector<std::pair<std::string, Barkey>>;
    
-    /* Ïîñòğîèòåëè ìåíş */
+    /* ĞŸĞ¾ÑÑ‚Ñ€Ğ¾Ğ¸Ñ‚ĞµĞ»Ğ¸ Ğ¼ĞµĞ½Ñ */
     Menu make_menu(const std::string& menu_raw, char del = '|',
-        const std::string& quit = "ÂÛÉÒÈ ÈÇ ÑÈÌÓËßÒÎĞÀ");
+        const std::string& quit = "Ğ’Ğ«Ğ™Ğ¢Ğ˜ Ğ˜Ğ— Ğ¡Ğ˜ĞœĞ£Ğ›Ğ¯Ğ¢ĞĞ Ğ");
     Menu make_menu(char bar_key, const std::string& quit);
     std::vector<std::pair<vehicles::Typeid, std::string>> make_list_racers();
 
     bool key_exists(const Menu& menu, char bar_key);    
     std::string get_name_racer(const Menu& menu, char bar_key);
     
-    /* Âûâîä èíôîğìàöèè */
+    /* Ğ’Ñ‹Ğ²Ğ¾Ğ´ Ğ¸Ğ½Ñ„Ğ¾Ñ€Ğ¼Ğ°Ñ†Ğ¸Ğ¸ */
     void view_info_racing(const std::vector<std::unique_ptr<vehicles::Vehicle>>& race);
 
     template<typename N, typename V>

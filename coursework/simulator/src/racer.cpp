@@ -1,4 +1,4 @@
-/* "racer.cpp */
+п»ї/* "racer.cpp */
 
 #include "racer.h"
 #include "types.h"
@@ -51,7 +51,7 @@ namespace race
                 racer = std::make_unique<Vehicle_air<Broom<double>>>(20.0);
                 break;
             default:
-                throw std::logic_error{ "Выберите корректное значение." };
+                throw std::logic_error{ "Р’С‹Р±РµСЂРёС‚Рµ РєРѕСЂСЂРµРєС‚РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ." };
         }
         return racer;
     }

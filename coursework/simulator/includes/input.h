@@ -1,4 +1,4 @@
-/* input.h */
+п»ї/* input.h */
 
 #ifndef INPUT_H
 #define INPUT_H
@@ -10,11 +10,11 @@
 namespace bag {
     template <typename T>
     std::istream& get_input_value(std::istream&, T&, const std::string&,
-        const std::string & = "Введите корректное значение для данного типа.");
+        const std::string & = "Р’РІРµРґРёС‚Рµ РєРѕСЂСЂРµРєС‚РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ РґР°РЅРЅРѕРіРѕ С‚РёРїР°.");
 
     template <typename T>
     T get_input_value(const std::string&,
-        const std::string & = "Введите корректное значение для данного типа.");
+        const std::string & = "Р’РІРµРґРёС‚Рµ РєРѕСЂСЂРµРєС‚РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ РґР°РЅРЅРѕРіРѕ С‚РёРїР°.");
 }
 
 namespace bag
