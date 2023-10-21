@@ -2,9 +2,9 @@
 
 #include <iostream>
 
-#include "Geometric.h"
-#include "Types.h"
-#include "Localisation.h"
+#include "..\..\lib\Geometric\Geometric\Codes\Types.h"
+#include "..\..\lib\Geometric\Geometric\Codes\Geometric.h"
+#include "..\..\lib\localisation.h"
 
 int main()
 {
@@ -68,10 +68,14 @@ int main()
 		}		
 	}
 
+	geo::IShape* shap{ shapes[0] };
+
 	/* Уничтожение фигур - освобождение ресурсов */
 	for (auto&& shape : shapes) {
 		shape->release(); /* delete shape;*/
 		shape = nullptr;
 	}
+
+	std::system("pause");
 	return 0;
 }

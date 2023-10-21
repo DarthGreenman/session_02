@@ -73,5 +73,7 @@ int main()
 		shape->release(); /* delete shape;*/
 		shape = nullptr;
 	}
+
+	std::system("pause");
 	return 0;
 }

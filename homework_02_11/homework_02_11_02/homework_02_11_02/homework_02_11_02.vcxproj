@@ -70,6 +70,18 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>..\..\..\lib\Addressing_someone\x64\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LibraryPath>..\..\..\lib\Addressing_someone\x64\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LibraryPath>..\..\..\lib\Addressing_someone\x64\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LibraryPath>..\..\..\lib\Addressing_someone\x64\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level4</WarningLevel>
@@ -77,7 +89,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>D:\Users\dima_kostyuchenko\Documents\Visual Studio 2022\source\repos\sessions\session_02\homework_02_11\lib;D:\Users\dima_kostyuchenko\Documents\Visual Studio 2022\source\repos\sessions\session_02\homework_02_11\lib\Leaver\Leaver;D:\Users\dima_kostyuchenko\Documents\Visual Studio 2022\source\repos\sessions\session_02\homework_02_11\lib\Greeter\Greeter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -94,7 +106,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>D:\Users\dima_kostyuchenko\Documents\Visual Studio 2022\source\repos\sessions\session_02\homework_02_11\lib;D:\Users\dima_kostyuchenko\Documents\Visual Studio 2022\source\repos\sessions\session_02\homework_02_11\lib\Leaver\Leaver;D:\Users\dima_kostyuchenko\Documents\Visual Studio 2022\source\repos\sessions\session_02\homework_02_11\lib\Greeter\Greeter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -111,7 +123,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>d:\Users\Darth Greenman\Documents\Visual Studio 2022\source\repos\sessions\session_02\homework_02_11\lib\Leaver\Leaver;d:\Users\Darth Greenman\Documents\Visual Studio 2022\source\repos\sessions\session_02\homework_02_11\lib\Greeter\Greeter;d:\Users\Darth Greenman\Documents\Visual Studio 2022\source\repos\sessions\session_02\homework_02_11\lib;D:\Users\dima_kostyuchenko\Documents\Visual Studio 2022\source\repos\sessions\session_02\homework_02_11\lib;D:\Users\dima_kostyuchenko\Documents\Visual Studio 2022\source\repos\sessions\session_02\homework_02_11\lib\Leaver\Leaver;D:\Users\dima_kostyuchenko\Documents\Visual Studio 2022\source\repos\sessions\session_02\homework_02_11\lib\Greeter\Greeter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,7 +140,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>D:\Users\dima_kostyuchenko\Documents\Visual Studio 2022\source\repos\sessions\session_02\homework_02_11\lib;D:\Users\dima_kostyuchenko\Documents\Visual Studio 2022\source\repos\sessions\session_02\homework_02_11\lib\Leaver\Leaver;D:\Users\dima_kostyuchenko\Documents\Visual Studio 2022\source\repos\sessions\session_02\homework_02_11\lib\Greeter\Greeter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -140,6 +152,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="homework_02_11_02.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\lib\Addressing_someone\Addressing_someone\Addressing_someone.vcxproj">
+      <Project>{eb0c74e8-f602-4300-ab69-b8f9264f90eb}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

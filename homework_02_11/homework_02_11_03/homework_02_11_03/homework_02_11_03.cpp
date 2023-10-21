@@ -26,7 +26,8 @@ int main()
     cout << hello.greet(name);
 
     bag::Leaver goodbye;
-    cout << '\n' << goodbye.leave(name);
+    cout << '\n' << goodbye.leave(name) << '\n';
 
+    std::system("pause");
     return 0;
 }

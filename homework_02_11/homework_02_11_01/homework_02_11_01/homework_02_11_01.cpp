@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-#include "../../lib/Greeter/Greeter/Greeter.h"
+#include "..\..\lib\Greeter\Greeter\Greeter.h"
 #include "Localisation.h"
 
 int main()
@@ -17,7 +17,8 @@ int main()
     std::cin >> name;
 
     bag::Greeter message;
-    std::cout << message.greet(name);
+    std::cout << message.greet(name) << '\n';
 
+    std::system("pause");
     return 0;
 }

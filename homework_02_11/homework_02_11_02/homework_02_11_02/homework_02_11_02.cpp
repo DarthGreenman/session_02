@@ -5,7 +5,7 @@
 
 #include "..\..\lib\Addressing_someone\Addressing_someone\Greeter.h"
 #include "..\..\lib\Addressing_someone\Addressing_someone\Leaver.h"
-#include "Localisation.h"
+#include "..\..\lib\localisation.h"
 
 int main()
 {
@@ -25,7 +25,8 @@ int main()
     cout << hello.greet(name);
     
     bag::Leaver goodbye;
-    cout << '\n' << goodbye.leave(name);
+    cout << '\n' << goodbye.leave(name) << '\n';
 
+    std::system("pause");
     return 0;
 }
