@@ -4,10 +4,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "simulator", "simulator\simulator.vcxproj", "{C25E839B-6AF8-484A-8650-9C5A5B94DDFF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F2BCFDA6-1420-4292-8315-C3C298DFFAEA} = {F2BCFDA6-1420-4292-8315-C3C298DFFAEA}
+		{FCB5A4FE-D0D8-441B-ACDD-7158530DC011} = {FCB5A4FE-D0D8-441B-ACDD-7158530DC011}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vehicle", "..\vehicle\vehicle\vehicle.vcxproj", "{F2BCFDA6-1420-4292-8315-C3C298DFFAEA}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "race", "..\race\race\race.vcxproj", "{FCB5A4FE-D0D8-441B-ACDD-7158530DC011}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{E4B82F2F-15B9-45DC-ADBF-932DEF26EE90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +50,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F2BCFDA6-1420-4292-8315-C3C298DFFAEA} = {E4B82F2F-15B9-45DC-ADBF-932DEF26EE90}
+		{FCB5A4FE-D0D8-441B-ACDD-7158530DC011} = {E4B82F2F-15B9-45DC-ADBF-932DEF26EE90}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BCFD06F6-DFF6-4951-AF61-E975C539DC04}
