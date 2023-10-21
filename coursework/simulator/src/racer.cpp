@@ -10,17 +10,6 @@
 
 namespace race
 {
-    bool is_registered_racer(const std::vector<std::unique_ptr<vehicles::Vehicle>>& race,
-        std::string name)
-    {
-        for (const auto& racer : race) {
-            if (racer.get()->name() == name) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     std::unique_ptr<vehicles::Vehicle> make_racer(char bar_key)
     {
         using namespace vehicles;

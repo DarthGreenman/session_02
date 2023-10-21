@@ -62,9 +62,11 @@ int main()
                 std::toupper(bar_key) != static_cast<char>(ui::Barkey::QUIT); )
             {
                 if (ui::key_exists(menu_racers, bar_key)) /* Проверка наличия bar_key в меню */
-                {                    
-                    if (const auto racer = ui::get_name_racer(menu_racers, bar_key);
-                        !race::is_registered_racer(team, racer)) /* Проверка регистрации участника */
+                {      
+                    const std::string name = ui::get_name_racer(menu_racers, bar_key);
+                    if ( const auto it = std::find_if(std::begin(team), std::end(team),
+                        [&name](std::unique_ptr<vehicles::Vehicle>& racer) { return racer.get()->name() == name; });
+                        it == std::end(team)) /* Проверка регистрации участника */
                     { /* Не зарегистрированный */
                         team.push_back(std::move(race::make_racer(bar_key)));
                         cout << "\nЗАГЕРИСТРИРОВАННЫЕ УЧАСТНИКИ:\n";
