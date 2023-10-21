@@ -113,7 +113,7 @@ int main()
         lap.start();
         auto result = lap.finish();
         /* Сортировка участников по результату */
-        std::sort(result.begin(), result.end(), [](const std::pair<std::string, double>& lhs,
+        std::sort(std::begin(result), std::end(result), [](const std::pair<std::string, double>& lhs,
             const std::pair<std::string, double>& rhs) { return lhs.second < rhs.second; }
         );
         cout << "\n\nТАБЛИЦА РЕЗУЛЬТАТОВ\n\n";
